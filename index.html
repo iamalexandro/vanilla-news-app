@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="Content-Security-Policy"
+			content="upgrade-insecure-requests"
+		/>
+		<link rel="stylesheet" href="styles/style.css" />
+		<title>News</title>
+	</head>
+	<body>
+		<!-- navbar -->
+		<nav class="main-nav">
+			<div class="main-nav__container util__grid-x">
+				<div class="main-nav__logo util__grid-y util__align-center">
+					<img src="assets/logo-1.svg" alt="" />
+				</div>
+				<ul class="main-nav__list">
+					<li class="util__grid-y util__align-center main-nav__item">
+						<select
+							name="Sections"
+							id="select-sections"
+							class="main-nav__select"
+						>
+							<option value="business">Business</option>
+							<option value="entertainment" selected>Entertainment</option>
+							<option value="economics">Economics</option>
+							<option value="technology">Technology</option>
+							<option value="innovation">Innovation</option>
+						</select>
+						<div class="arrow"></div>
+					</li>
+					<li class="util__grid-y util__align-center main-nav__item">
+						<a href="#" class="main-nav__link">Editorial</a>
+					</li>
+					<li class="util__grid-y util__align-center main-nav__item">
+						<a href="#" class="main-nav__link">Contact us</a>
+					</li>
+				</ul>
+				<div class="main-nav__user-container util__grid-y util__align-center">
+					<div class="util__grid-x util__align-end">
+						<div class="main-nav__user-img util__grid-x util__align-center">
+							<p class="main-nav__user-img-txt util__grid-y util__align-center">
+								JS
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- content -->
+		<div class="content">
+			<!-- welcome section -->
+			<div class="util__align-center util__grid-x">
+				<div id="welcome-alert" class="welcome util__grid-y util__align-center">
+					<div class="util__grid-x">
+						<p class="welcome__txt">
+							Welcome to the new look of News.com. Keep scrolling to discover
+							interesting new features and news.
+						</p>
+						<!-- x button -->
+						<div class="util__grid-y util__align-center util__full">
+							<div class="util__grid-x util__align-end">
+								<button class="welcome__close-button" onclick="closeWelcome()">
+									<div class="welcome__circle util__grid-x util__align-center">
+										<div class="util__grid-x welcome__x-shape">
+											<div class="welcome__rectangle"></div>
+											<div
+												class="welcome__rectangle welcome__rectangle--aux"
+											></div>
+										</div>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- news section -->
+			<section class="news util__grid-y">
+				<div class="util__align-center util__grid-x">
+					<div class="news__title util__grid-x util__align-start">
+						<h1 class="news__title-txt">Top news</h1>
+						<h1 id="dinamicTitle" class="news__title-txt news__title-dinamic">
+							Entertainment
+						</h1>
+					</div>
+				</div>
+				<!-- news cards -->
+				<div class="util__grid-x util__align-center">
+					<div class="news__cards util__grid-x util__align-center"></div>
+				</div>
+				<div class="util__grid-x util__align-center">
+					<button id="showMore" class="btn" onclick="showMore()">
+						<p class="news__view-txt">View more stories</p>
+					</button>
+				</div>
+			</section>
+		</div>
+
+		<!-- subscribe section -->
+		<section class="subscribe util__grid-y util__align-center">
+			<div class="subscribe__content">
+				<h2 class="subscribe__title">Subscribe to our newsletter</h2>
+				<div class="util__grid-y subcribe__description">
+					<span class="subscribe__description-txt"
+						>Subscribe to our newsletter to receive weekly digests</span
+					>
+					<span class="subscribe__description-txt"
+						>of the best and most ground-breaking news. Also</span
+					>
+					<span class="subscribe__description-txt"
+						>receive a discount on your monthly subscription.</span
+					>
+				</div>
+				<button class="btn subscribe__btn">
+					<p class="btn-txt subcribe__btn-txt">Subscribe</p>
+				</button>
+			</div>
+		</section>
+
+		<!-- contact section -->
+
+		<section class="contact">
+			<div class="util__grid-x util__align-center">
+				<p class="contact__txt util__grid-x">Contact Us</p>
+			</div>
+			<!-- inputs -->
+			<div class="util__grid-x util__align-center">
+				<form
+					id="contact__form"
+					class="contact__form util__grid-x util__align-center"
+				>
+					<!-- first name -->
+					<div class="contact__form-item util__grid-y">
+						<p class="contact__label">First Name</p>
+						<input
+							id="contact__firstName"
+							name="firstName"
+							class="contact__input"
+							type="text"
+						/>
+					</div>
+
+					<!-- last name -->
+					<div class="contact__form-item util__grid-y">
+						<p class="contact__label">Last Name</p>
+						<input
+							id="contact__lastName"
+							name="lastName"
+							class="contact__input"
+							type="text"
+						/>
+					</div>
+
+					<!-- email -->
+					<div class="contact__form-item util__grid-y">
+						<p class="contact__label">Email</p>
+						<input
+							id="contact__email"
+							name="email"
+							class="contact__input"
+							type="email"
+						/>
+					</div>
+
+					<!-- phone -->
+					<div class="contact__form-item util__grid-y">
+						<p class="contact__label">Phone number</p>
+						<input
+							id="contact__phone"
+							class="contact__input"
+							type="tel"
+							name="phone"
+							required
+						/>
+					</div>
+
+					<!-- comment -->
+					<div
+						class="contact__form-item contact__form-item--large util__grid-y util__full"
+					>
+						<p class="contact__label">Comment</p>
+						<textarea
+							id="contact__comment"
+							class="contact__input contact__input--large"
+							type="textarea"
+							name="comment"
+						></textarea>
+					</div>
+					<!-- checkbox -->
+					<div class="contact__send util__grid-x">
+						<input
+							class="contact__send-input"
+							type="checkbox"
+							name=""
+							id="sendNews"
+						/>
+						<div class="util__grid-y util__align-center">
+							<p class="contacts__send-txt">
+								Send me emails about breaking news and promotions.
+								<b id="asterisk" style="color: red">*</b>
+							</p>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- error message -->
+			<div class="contact__error contact__error-msg--hidden" id="errorMsg">
+				<p class="contact__error-msg"><b>Error:</b> Empty Fields</p>
+			</div>
+
+			<!-- submit button -->
+			<div class="util__grid-x util__align-center">
+				<div class="contact__btn util__grid-x util__align-center">
+					<button
+						class="btn contact__btn-submit"
+						type="submit"
+						onclick="submit()"
+					>
+						<p class="contact__submit-txt">Submit form</p>
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- modal -->
+		<div id="modal" class="modal modal--hidden">
+			<div class="modal__background"></div>
+			<div id="modal-box" class="modal__box util__grid-y modal__box--hidden">
+				<div class="util__grid-y modal__button">
+					<button onclick="closeModal()" class="modal__button-x">X</button>
+				</div>
+				<!-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores ad delectus autem! Fugit earum iusto hic in exercitationem culpa minus a dignissimos, voluptate veniam accusamus nemo quaerat necessitatibus placeat obcaecati! -->
+				<div class="modal__content">
+					<p class="modal__title util__grid-x util__align-center">
+						Form sent successfully
+					</p>
+					<div class="modal__info util__grid-y">
+						<div class="util__grid-y util__align-center">
+							<div class="util__grid-x">
+								<p class="modal__info-item">Name</p>
+								<p
+									id="modalName"
+									class="modal__info-item modal__info-item--thin"
+								>
+									John
+								</p>
+							</div>
+						</div>
+
+						<div class="util__grid-x">
+							<p class="modal__info-item">Last Name</p>
+							<p
+								id="modalLastName"
+								class="modal__info-item modal__info-item--thin"
+							>
+								Doe
+							</p>
+						</div>
+
+						<div class="util__grid-x">
+							<p class="modal__info-item">Email</p>
+							<p
+								id="modalEmail"
+								class="modal__info-item modal__info-item--thin"
+							>
+								email@emai.com
+							</p>
+						</div>
+
+						<div class="util__grid-x">
+							<p class="modal__info-item">Phone</p>
+							<p
+								id="modalPhone"
+								class="modal__info-item modal__info-item--thin"
+							>
+								322 407 9515
+							</p>
+						</div>
+
+						<div>
+							<p class="modal__info-item modal__info-comment">Comment</p>
+							<p
+								id="modalComment"
+								class="modal__info-item modal__info-item--comment"
+							>
+								Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et
+								sint veniam minus architecto sed laborum? Illum maiores dolores
+								quidem veritatis, beatae ad accusamus vitae, odio exercitationem
+								incidunt nam dicta molestias!
+							</p>
+							<div class="util__grid-x util__align-center">
+								<button id="modalDone" class="btn btn--done" onclick="done()">
+									<p class="news__view-txt">Done</p>
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- scripts -->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="scripts/script.js"></script>
+	</body>
+</html>
