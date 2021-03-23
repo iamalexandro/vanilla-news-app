@@ -6,6 +6,11 @@ _This is a simple vanilla news app where we can find some news of diferent topic
 
 _These instructions will help you compile the project and deploy it_
 
+
+## Demo 👀
+
+_you can access to a live demo in this [link](https://vanilla-news.netlify.app)_
+
 ### Prerequisites 📋
 
 _What things do you need to install, and how to install them_
@@ -16,10 +21,6 @@ _or using Homebrew (MacOs)_
 ```
 brew install node
 ```
-
-## Demo 👀
-
-_you can access to a live demo in this [link](https://vanilla-news.netlify.app)_
 
 ## Build with 🛠️
 
