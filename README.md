@@ -6,7 +6,7 @@ _This is a simple vanilla news app where we can find some news of diferent topic
 
 _These instructions will help you compile the project and deploy it_
 
-### Pre-requisitos 📋
+### Prerequisites 📋
 
 _What things do you need to install, and how to install them_
 
