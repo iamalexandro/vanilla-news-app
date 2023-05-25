@@ -2,14 +2,15 @@
 
 _This is a simple vanilla news app where we can find some news of diferent topics_
 
-## Getting Started 🚀
-
-_These instructions will help you compile the project and deploy it_
-
-
 ## Demo 👀
 
 _you can access to a live demo in this [link](https://vanilla-news.netlify.app)_
+
+## React Version [repo](https://github.com/iamalexandro/react-news-app)
+
+## Getting Started 🚀
+
+_These instructions will help you compile the project and deploy it_
 
 ## Build with 🛠️
 
